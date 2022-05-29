@@ -1,1 +1,1 @@
-# Rails_App_Template
+YummyRecipes
