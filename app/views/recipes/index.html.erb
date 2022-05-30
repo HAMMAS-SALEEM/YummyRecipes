@@ -1,9 +1,11 @@
 <ul class="recipes_container">
   <% @recipes.each_with_index do |recipe, index| %>
     <li class="recipe_details">
-      <h2 class="recipe_heading">Recipe <%= index+1 %></h2>
-      <p class="recipe_description"><%= recipe.description %></p>
-      <%= link_to "Remove", recipes_path, class: 'remove_recipe_btn' %>
+      <%= link_to recipe do %>
+        <h2 class="recipe_heading">Recipe <%= index+1 %></h2>
+      <% end %>
+        <p class="recipe_description"><%= recipe.description %></p>
+        <%= link_to "Remove", recipes_path, class: 'remove_recipe_btn' %>
     </li>
   <% end %>
 </ul>
