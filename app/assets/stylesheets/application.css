@@ -80,4 +80,5 @@ li {
 .remove_recipe_btn,
 .recipe_heading {
   margin: 0 auto;
+  padding-right: 10px;
 }
