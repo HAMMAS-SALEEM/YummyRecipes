@@ -20,6 +20,12 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+/* Food Model Styling Starts */
+
 .add_food_button_container {
   display: flex;
   justify-content: flex-end;
@@ -52,4 +58,26 @@
 
 .food_even {
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Model Styling Starts */
+
+.recipes_container {
+  padding: 40px 100px;
+}
+
+.recipe_details {
+  display: grid;
+  grid-template-columns: 120px auto;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.recipes_container .recipe_details:not(:first-child) {
+  margin-top: 40px;
+}
+
+.remove_recipe_btn,
+.recipe_heading {
+  margin: 0 auto;
 }
