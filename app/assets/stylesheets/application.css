@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.add_food_button_container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.add_food_btn {
+  background: rgb(252, 210, 210);
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.add_food_btn:hover {
+  background: rgb(255, 82, 82);
+}
+
+.food_table {
+  margin: 0 auto;
+}
+
+.food_table,
+.food_heading,
+.food_detail {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.food_even {
+  background: rgba(0, 0, 0, 0.2);
+}

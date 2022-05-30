@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  food_name: "Food"
+  measurement_unit: "Measurement Unit"
+  unit_price: "Unit Price"
+  food_action: "Action"
