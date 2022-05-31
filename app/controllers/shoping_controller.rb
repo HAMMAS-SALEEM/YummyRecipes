@@ -1,9 +1,9 @@
-class GeneralShoppingListController < ApplicationController
+class ShopingController < ApplicationController
   def index
     @shop = []
     @total = 0
 
-    results = Food.joins(:recipe_foods).select(:foods, 'foods.*',
+    results = Food.join(:receipe_foods).select(:foods, 'foods.*',
                                                'sum(recipe_foods.quantity) as rf_q').joins(:inventory_foods).select('inventory_foods.quantity as if_q').group('foods.id, inventory_foods.quantity')
 
     results.each do |result|
