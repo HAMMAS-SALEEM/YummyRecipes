@@ -1,5 +1,5 @@
 <div class="add_food_button_container" >
-  <%= link_to "Add Food", recipes_path, class: "add_food_btn" %>
+  <%= link_to "Add Food", new_food_path, class: "add_food_btn" %>
 </div>
 <table class="food_table" >
   <tr>
@@ -13,7 +13,7 @@
       <td class="food_detail" ><%= food.name %></td>
       <td class="food_detail" ><%= food.measurement_unit %></td>
       <td class="food_detail" >$<%= food.price %></td>
-      <td class="food_detail" ><%= link_to "remove", root_path %></td>
+      <td class="food_detail" ><%= link_to "REMOVE", foods_path(@food_to_delete), method: :delete %></td>
     <tr>
   <% end %>
 </table>
