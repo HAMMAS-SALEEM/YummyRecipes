@@ -44,6 +44,35 @@ li {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.food_form_heading {
+  text-align: center;
+}
+
+.food_form_container {
+  justify-content: center;
+}
+
+.foods_form {
+  flex-direction: column;
+  width: 350px;
+}
+
+.food_form_container,
+.foods_form {
+  display: flex;
+}
+
+.food_form_heading,
+.form_field_label,
+.food_form_submit_btn {
+  margin-top: 20px;
+}
+
+.form_field,
+.food_form_submit_btn {
+  height: 30px;
+}
+
 /* Recipe Model Styling Starts */
 
 .recipes_container {
