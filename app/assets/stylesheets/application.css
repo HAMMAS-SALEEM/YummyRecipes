@@ -77,7 +77,8 @@ li {
   margin-top: 25px;
 }
 
-.recipe_details_buttons_container, .recipe_details_head_container {
+.recipe_details_buttons_container,
+.recipe_details_head_container {
   display: flex;
   justify-content: space-between;
 }
