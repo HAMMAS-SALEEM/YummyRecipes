@@ -9,7 +9,7 @@
     <li>Steps are here: <%= @recipe.description %></li>
     <li class="recipe_details_buttons_container">
       <%= link_to "Generate Shopping List" %>
-      <%= link_to "Add Ingrediats" %>
+      <%= link_to "Add Ingrediats", new_recipe_recipe_food_path(@recipe) %>
     </li>
     <li>
       <table class="food_table" >
