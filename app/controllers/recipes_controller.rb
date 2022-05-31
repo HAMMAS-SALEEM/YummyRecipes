@@ -15,13 +15,13 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(name: recipe_params[:name], preparation_time: recipe_params[:preparation_time],
-                         cooking_time: recipe_params[:cooking_time], user_id: current_user.id, 
+                         cooking_time: recipe_params[:cooking_time], user_id: current_user.id,
                          description: recipe_params[:description], public: true)
     if @recipe.save
-      flash[:notice] = "Recipe Successfully Created"
+      flash[:notice] = 'Recipe Successfully Created'
       redirect_to recipes_path
     else
-      flash[:notice] = "Invalid Recipe"
+      flash[:notice] = 'Invalid Recipe'
       redirect_to new_recipe_path
     end
   end
