@@ -12,12 +12,16 @@ class FoodsController < ApplicationController
                                    measurement_unit: food_params[:measurement_unit],
                                    price: food_params[:price])
     if @food.save
-      flash[:success] = 'Food is successfully created'
+      flash[:notice] = 'Food is successfully created'
       redirect_to foods_path
     else
-      flash[:error] = 'Invalid Entry'
+      flash[:notice] = 'Invalid Entry'
       redirect_to new_food_path
     end
+  end
+
+  def destroy
+    @food_to_delete = Food.all.find([:id]).destroy
   end
 
   private

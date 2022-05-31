@@ -44,32 +44,40 @@ li {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.food_form_heading {
+.food_form_heading,
+.recipe_form_heading {
   text-align: center;
 }
 
-.food_form_container {
+.food_form_container,
+.recipe_form_container {
   justify-content: center;
 }
 
-.foods_form {
+.foods_form,
+.recipe_form {
   flex-direction: column;
   width: 350px;
 }
 
 .food_form_container,
-.foods_form {
+.recipe_form_container,
+.foods_form,
+.recipe_form {
   display: flex;
 }
 
 .food_form_heading,
+.recipe_form_heading,
 .form_field_label,
-.food_form_submit_btn {
+.food_form_submit_btn,
+.recipe_form_submit_btn {
   margin-top: 20px;
 }
 
 .form_field,
-.food_form_submit_btn {
+.food_form_submit_btn,
+.recipe_form_submit_btn {
   height: 30px;
 }
 
