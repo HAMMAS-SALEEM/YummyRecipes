@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @foods = Food.all
+    @foods = current_user.foods.all
   end
 
   def new
@@ -8,9 +9,9 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = current_user.foods.new(name: food_params[:name],
-                                   measurement_unit: food_params[:measurement_unit],
-                                   price: food_params[:price])
+    @food = Food.new(name: food_params[:name],
+                     measurement_unit: food_params[:measurement_unit],
+                     price: food_params[:price], user_id: current_user.id)
     if @food.save
       flash[:notice] = 'Food is successfully created'
       redirect_to foods_path
