@@ -3,5 +3,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.includes(:user)
   end
 
-  def show; end
+  def show
+    @recipes = Recipe.all.includes(:user)
+    @recipe = @recipes.find(params[:id])
+    @recipe_foods = RecipeFood.where(recipe_id: @recipe.id)
+  end
 end
