@@ -34,4 +34,5 @@ en:
   food_name: "Food"
   measurement_unit: "Measurement Unit"
   unit_price: "Unit Price"
-  food_action: "Action"
+  action: "Actions"
+  quantity: "Quantity"

@@ -1,2 +1,24 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<%= @recipes.index(@recipe)+1%>
+<%= @recipe.name %>
+<%= @recipe.preparation_time %>
+<%= @recipe.cooking_time %>
+<%= @recipe.public %>
+<%= @recipe.description %>
+<%= link_to "Generate Shopping List" %>
+<%= link_to "Add Ingrediats" %>
+<table class="food_table" >
+  <tr>
+    <th class="food_heading"><%= t('.food_name') %></th>
+    <th class="food_heading"><%= t('.quantity') %></th>
+    <th class="food_heading"><%= t('.unit_price') %></th>
+    <th class="food_heading"><%= t('.action') %></th>
+  </tr>
+  <% @recipe_foods.each_with_index do |rf, index| %>
+    <tr class="<%= index%2==0 ? 'food_even' : 'food_prime' %>" >
+      <td class="food_detail" ><%= rf.food.name %></td>
+      <td class="food_detail" ><%= rf.quantity %> <%= rf.food.measurement_unit %></td>
+      <td class="food_detail" >$<%= rf.food.price %></td>
+      <td class="food_detail" ><%= link_to "remove", root_path %></td>
+    <tr>
+  <% end %>
+</table>
