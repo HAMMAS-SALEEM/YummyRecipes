@@ -10,8 +10,8 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(name: food_params[:name],
-                                   measurement_unit: food_params[:measurement_unit],
-                                   price: food_params[:price], user_id: current_user.id)
+                     measurement_unit: food_params[:measurement_unit],
+                     price: food_params[:price], user_id: current_user.id)
     if @food.save
       flash[:notice] = 'Food is successfully created'
       redirect_to foods_path
