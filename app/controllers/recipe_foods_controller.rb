@@ -17,6 +17,17 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_food = @recipe.recipe_foods.all.find(params[:id])
+    if @recipe_food.destroy
+      flash[:notice] = "Food Successfully Removed"
+    else
+      flash[:notice] = "Invalid Transaction"
+    end
+    redirect_to recipe_path(@recipe)
+  end
+
   private
 
   def recipe_food_params

@@ -28,8 +28,8 @@
             <td class="food_detail" ><%= rf.food.name %></td>
             <td class="food_detail" ><%= rf.quantity %> <%= rf.food.measurement_unit %></td>
             <td class="food_detail" >$<%= rf.food.price %></td>
-            <% if can? :destroy, rf %>
-            <td class="food_detail" ><%= button_to "remove", recipe_recipe_food(recipe_id, @recipe.id, id: rf.id) %></td>
+            <% if can? :destroy, @recipe %>
+            <td class="food_detail" ><%= button_to "remove", recipe_recipe_food_path(@recipe, id: rf.id), method: :delete %></td>
             <% end %>
           <tr>
         <% end %>
