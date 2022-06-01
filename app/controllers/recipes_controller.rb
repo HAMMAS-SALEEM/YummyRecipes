@@ -1,12 +1,10 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @recipes = current_user.recipes.all
   end
 
   def show
-    @recipes = current_user.recipes.all
+    @recipes = Recipe.all
     @recipe = @recipes.find(params[:id])
     @recipe_foods = RecipeFood.where(recipe_id: @recipe.id)
   end
@@ -25,6 +23,16 @@ class RecipesController < ApplicationController
     else
       flash[:notice] = 'Invalid Recipe, all fields have to be completed'
       redirect_to new_recipe_path
+    end
+  end
+
+  def destroy
+    @recipes = Recipe.all
+    @recipe = @recipes.find(params[:id])
+    if @recipe.destroy
+      redirect_to recipes_path
+    else
+      flash[:notice] = 'Transaction is invalid'
     end
   end
 

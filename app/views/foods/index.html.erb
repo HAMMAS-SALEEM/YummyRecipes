@@ -13,7 +13,7 @@
       <td class="food_detail" ><%= food.name %></td>
       <td class="food_detail" ><%= food.measurement_unit %></td>
       <td class="food_detail" >$<%= food.price %></td>
-      <td class="food_detail" ><%= link_to "REMOVE", foods_path(@food_to_delete), method: :delete %></td>
+      <td class="food_detail" ><%= button_to "REMOVE", food_path(id: food.id), method: :delete %></td>
     <tr>
   <% end %>
 </table>
