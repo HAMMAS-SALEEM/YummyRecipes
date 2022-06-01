@@ -180,3 +180,15 @@ li {
   height: 35px;
   width: 100%;
 }
+
+/* Navbar Styling Starts */
+
+.nav_header,
+.user_info,
+.user_session {
+  display: flex;
+}
+
+.nav_header {
+  justify-content: space-between;
+}
