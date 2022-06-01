@@ -22,7 +22,8 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food_to_delete = Food.all.find([:id]).destroy
+    @food = Food.all.find(params[:id]).destroy
+    redirect_to foods_path
   end
 
   private

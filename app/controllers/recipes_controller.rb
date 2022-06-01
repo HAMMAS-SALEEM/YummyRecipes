@@ -27,6 +27,16 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    @recipes = Recipe.all
+    @recipe = @recipes.find(params[:id])
+    if @recipe.destroy
+      redirect_to recipes_path
+    else
+      flash[:notice] = "Transaction is invalid"
+    end
+  end
+
   private
 
   def recipe_params
