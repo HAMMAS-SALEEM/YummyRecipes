@@ -183,7 +183,9 @@ li {
 
 /* Navbar Styling Starts */
 
-.nav_header, .user_info, .user_session {
+.nav_header,
+.user_info,
+.user_session {
   display: flex;
 }
 
