@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
       flash[:notice] = 'Recipe Successfully Created'
       redirect_to recipes_path
     else
-      flash[:notice] = 'Invalid Recipe'
+      flash[:notice] = 'Invalid Recipe, any field is not supposed to be empty'
       redirect_to new_recipe_path
     end
   end
