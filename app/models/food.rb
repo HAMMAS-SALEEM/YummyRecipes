@@ -3,5 +3,9 @@ class Food < ApplicationRecord
   has_many :inventory_foods, dependent: :destroy
   has_many :inventories, through: :inventory_foods, dependent: :destroy
   has_many :recipe_foods, dependent: :destroy
-  has_many :recipes, through: :recipe_foods, dependent: :destroy
+  has_many :recipes, through: :recipe_foods, dependent: :destro
+
+  validates :name, presence: true, length: { maximum: 250 }
+  validates :measurement_unit, presence: true, comaprison: { great_than_or_equal_to: 0 }
+  validates :price, presence: true, comaprison: { great_than_or_equal_to: 0 }
 end
