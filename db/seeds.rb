@@ -17,7 +17,7 @@
 
 ## Tresor -----------
 
-tresor = User.create(name: 'tresor')
+tresor = User.create(name: 'tresor', email: 'tresor@test.com', password: '111111')
 inventory_tresor =  Inventory.create(name: "inventory for tresor", user: tresor)
 
 recipe_tresor_1 = Recipe.create(name: 'Apple Pie', preparation_time: '20 min', cooking_time: '45 min', description: 'I remember coming home sullen one day because we d lost a softball game. Grandma, in her wisdom, suggested, "Maybe a slice of my homemade apple pie will make you feel better." One bite, and Grandma was right. If you want to learn how to make homemade apple pie filling, this is retresor the only recipe you need. —Maggie Greene, Granite Falls, Washington', public: true, user: tresor)
@@ -100,7 +100,7 @@ RecipeFood.create(quantity: 100, recipe: recipe_tresor_3, food: food)
 
 # James ----
 
-james = User.create(name: 'james')
+james = User.create(name: 'james', email: 'james@test.com', password: '111111')
 inventory_james =  Inventory.create(name: "inventory for tresor", user: tresor)
 
 
