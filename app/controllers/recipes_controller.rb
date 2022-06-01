@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-
   def index
     @recipes = current_user.recipes.all
   end
@@ -33,7 +32,7 @@ class RecipesController < ApplicationController
     if @recipe.destroy
       redirect_to recipes_path
     else
-      flash[:notice] = "Transaction is invalid"
+      flash[:notice] = 'Transaction is invalid'
     end
   end
 
