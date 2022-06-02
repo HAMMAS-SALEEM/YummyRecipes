@@ -117,6 +117,10 @@ li {
   padding: 20px;
 }
 
+.recipe_name {
+  font-size: 30px;
+}
+
 .recipes_container .recipe_details:not(:first-child) {
   margin-top: 40px;
 }
@@ -124,7 +128,9 @@ li {
 .remove_recipe_btn,
 .recipe_heading {
   margin: 0 auto;
-  padding-right: 10px;
+  border: none;
+  background: none;
+  color: blue;
 }
 
 .recipe_complete_details_container {
