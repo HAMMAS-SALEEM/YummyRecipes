@@ -2,9 +2,7 @@
   <ul class="recipe_complete_details_container">
     <li class="recipe_details_head_container">
       <h2><%= @recipe.name %></h2>
-      <% if can? :read, @recipe %>
-        <span><%= @recipe.public %></span>
-      <% end %>
+      <%= render partial: "checkbox" %>
     </li>
     <li>Preparation Time: <%= @recipe.preparation_time %></li>
     <li>Cooking Time: <%= @recipe.cooking_time %></li>
@@ -37,4 +35,4 @@
       </table>
     </li>
   </ul>
-</section>  
+</section>
