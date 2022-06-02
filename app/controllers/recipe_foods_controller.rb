@@ -36,13 +36,13 @@ class RecipeFoodsController < ApplicationController
   end
 
   def remaining_foods
-    total_foods = current_user.foods.all
+    total_foods = current_user.foods
     total_recipe_foods = []
     current_user.recipes.includes(:recipe_foods).each do |recipe|
-      recipe.recipe_foods.each do |recipe_food|
+      recipe.recipe_foods.includes(:food).each do |recipe_food|
         total_recipe_foods << recipe_food.food
       end
     end
-    total_recipe_foods - total_foods
+    total_foods - total_recipe_foods
   end
 end

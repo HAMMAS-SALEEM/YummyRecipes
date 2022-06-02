@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: [:new, :create, :destroy]
   end
   resources :public_recipes, only: [:index]
-  resources :general_shopping_lists, only: [:index]
+  resources :general_shopping_lists, only: [:index], path: :general_shopping_list
 end
