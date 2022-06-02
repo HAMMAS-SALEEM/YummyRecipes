@@ -1,0 +1,20 @@
+<span>
+  Total amount to by all items is <%= @total_amount %>
+</span>
+<span>
+  Total items are <%= @total_items %>
+</span>
+<table class="food_table" >
+  <tr>
+    <th class="food_heading"><%= t('.food_name') %></th>
+    <th class="food_heading"><%= t('.measurement_unit') %></th>
+    <th class="food_heading"><%= t('.unit_price') %></th>
+  </tr>
+  <% @remain_foods.each_with_index do |food, index| %>
+    <tr class="<%= index%2==0 ? 'food_even' : 'food_prime' %>" >
+      <td class="food_detail" ><%= food.name %></td>
+      <td class="food_detail" ><%= food.measurement_unit %><%= food.recipe_foods %></td>
+      <td class="food_detail" >$<%= food.price %></td>
+    <tr>
+  <% end %>
+</table>
