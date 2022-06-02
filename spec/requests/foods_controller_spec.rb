@@ -43,5 +43,21 @@ RSpec.describe Food, type: :request do
     it 'should create new food' do
       expect(@food).to be_valid
     end
+
+    it 'should be of the person of id' do
+      expect(@user.foods.count).to be 1
+    end
+  end
+  describe 'should delete food' do
+    before(:each) do
+      @food = Food.create(name: 'Apple', measurement_unit: 'kg', price: '10', created_at: Time.now,
+      updated_at: Time.now, user_id: @user.id)
+    end
+
+    it 'should be of the person of id' do
+      expect(@user.foods.count).to be 1
+      @food.destroy
+      expect(@user.foods.count).to be 0
+    end
   end
 end
