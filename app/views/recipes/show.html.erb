@@ -9,13 +9,13 @@
     <li>Preparation Time: <%= @recipe.preparation_time %></li>
     <li>Cooking Time: <%= @recipe.cooking_time %></li>
     <li>Steps are here: <%= @recipe.description %></li>
-    <li class="recipe_details_buttons_container">
-      <%= link_to "Generate Shopping List" %>
-      <%= link_to "Add Ingrediats", new_recipe_recipe_food_path(@recipe) %>
-      <% if can? :destroy, @recipe %>
-        <%= button_to "Remove Recipe", recipe_path(@recipe), method: :delete %>
-      <% end %>
-    </li>
+    <% if can? :destroy, @recipe %>
+      <li class="recipe_details_buttons_container">
+        <%= link_to "Generate Shopping List" %>
+        <%= link_to "Add Ingrediats", new_recipe_recipe_food_path(@recipe) %>
+          <%= button_to "Remove Recipe", recipe_path(@recipe), method: :delete %>
+      </li>
+    <% end %>
     <li>
       <table class="food_table" >
         <tr>
