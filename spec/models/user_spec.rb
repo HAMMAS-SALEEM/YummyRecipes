@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:all) do
-    @user = User.create(name: 'Tresot', email: 'tresot@dodo.fr', password: '11111111')
+    @user = User.create(name: 'Tresor', email: 'tresor@dodo.fr', password: '11111111')
   end
 
   after(:each) do
@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'should create a user' do
-    @user = User.create(name: 'Tresot', email: 'tresotl@dodo.fr', password: '11111111')
+    @user = User.create(name: 'Tresor', email: 'tresorl@dodo.fr', password: '11111111')
     expect(@user).to be_valid
   end
 end
