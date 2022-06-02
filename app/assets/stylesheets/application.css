@@ -235,3 +235,18 @@ li {
   color: aliceblue;
   padding: 20px 15px 15px 15px;
 }
+
+/* Shopping List Styling Starts */
+
+.shopping_list_header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+}
+
+.shopping_list_header span {
+  background: wheat;
+  color: brown;
+  padding: 5px;
+  border-radius: 5px;
+}

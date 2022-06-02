@@ -1,10 +1,12 @@
-<span>
-  Total amount to by all items is <%= @total_amount %>
-</span>
-<span>
-  Total items are <%= @total_items %>
-</span>
-<table class="food_table" >
+<div class="shopping_list_header">
+  <span>
+    Total amount to by all items is $<%= @total_amount %>
+  </span>
+  <span>
+    Total items are <%= @total_items %>
+  </span>
+</div>
+<table class="food_table">
   <tr>
     <th class="food_heading"><%= t('.food_name') %></th>
     <th class="food_heading"><%= t('.quantity') %></th>

@@ -4,9 +4,10 @@
       <li class="link_btn"><%= link_to "Home", public_recipes_path %></li>
       <li class="link_btn"><%= link_to "My Recipes", recipes_path %></li>
       <li class="link_btn"><%= link_to "My Foods", foods_path %></li>
+      <li class="link_btn"><%= link_to "My Shopping List", general_shopping_lists_path %></li>
       <li class="link_btn"><%= link_to "Add Food", new_food_path %></li>
       <li class="link_btn"><%= link_to "Add Recipe", new_recipe_path %></li>
-      <li class="link_btn"><%= button_to "sign out", destroy_user_session_path, method: :delete, class: 'sign_out_btn' %></li>
+      <li class="link_btn"><%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'sign_out_btn' %></li>
     </ul>
   <% else %>
     <ul class="user_session">
