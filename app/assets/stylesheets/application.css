@@ -14,12 +14,17 @@
  *= require_self
  */
 
-@import './public_recipes.css';
+/* @import './public_recipes.css'; */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -183,12 +188,44 @@ li {
 
 /* Navbar Styling Starts */
 
-.nav_header,
-.user_info,
-.user_session {
-  display: flex;
+.nav_header {
+  background: rgb(136, 190, 136);
+  justify-content: space-between;
 }
 
-.nav_header {
+.user_session {
+  padding: 15px;
+}
+
+.session_transaction {
+  padding: 0;
+  width: 170px;
+}
+
+.user_session,
+.session_transaction {
+  display: flex;
   justify-content: space-between;
+}
+
+.sign_out_btn {
+  color: aliceblue;
+  padding: 0 5px;
+  border: none;
+}
+
+.link_btn,
+.sign_out_btn {
+  background: rgb(221, 0, 0);
+  border-radius: 5px;
+}
+
+.link_btn:hover,
+.sign_out_btn:hover {
+  background: rgb(138, 29, 29);
+}
+
+.link_btn a {
+  color: aliceblue;
+  padding: 20px 15px 15px 15px;
 }
