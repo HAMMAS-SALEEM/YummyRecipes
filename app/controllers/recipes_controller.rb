@@ -36,6 +36,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def update
+    Recipe.find(params[:id]).update(public: params[:recipe][:public])
+  end
+
   private
 
   def recipe_params

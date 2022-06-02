@@ -36,3 +36,5 @@ en:
   unit_price: "Unit Price"
   action: "Actions"
   quantity: "Quantity"
+  total_price: "Total Price"
+

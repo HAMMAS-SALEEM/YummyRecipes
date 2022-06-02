@@ -2,6 +2,7 @@ class RecipeFoodsController < ApplicationController
   def new
     @recipe_food = RecipeFood.new
     @recipe = Recipe.find(params[:recipe_id])
+    @remaining_foods = remaining_foods
   end
 
   def create
@@ -32,5 +33,16 @@ class RecipeFoodsController < ApplicationController
 
   def recipe_food_params
     params.require(:recipe_food).permit(:food_id, :quantity)
+  end
+
+  def remaining_foods
+    total_foods = current_user.foods
+    total_recipe_foods = []
+    current_user.recipes.includes(:recipe_foods).each do |recipe|
+      recipe.recipe_foods.includes(:food).each do |recipe_food|
+        total_recipe_foods << recipe_food.food
+      end
+    end
+    total_foods - total_recipe_foods
   end
 end

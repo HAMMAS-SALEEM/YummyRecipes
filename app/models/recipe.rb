@@ -11,8 +11,8 @@ class Recipe < ApplicationRecord
   def total_price
     total = 0
     recipe_foods.each do |recipe_food|
-      total += recipe_food.quantity * recipe_food.food.price
+      total += recipe_food.food.price * recipe_food.quantity
     end
-    total / 1000
+    total
   end
 end
