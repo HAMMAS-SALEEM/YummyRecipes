@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :request do
-    before(:each) do
-        @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now, 
-        email: 'test@email.com', encrypted_password: 'hammas')
-        @user.confirm
-        sign_in @user
-        get foods_path
-    end
+  before(:each) do
+    @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now,
+                        email: 'test@email.com', encrypted_password: 'hammas')
+    @user.confirm
+    sign_in @user
+    get foods_path
+  end
   describe 'Food Controller' do
     it 'gets the index page' do
       expect(response).to have_http_status :ok
@@ -38,7 +38,7 @@ RSpec.describe Food, type: :request do
   describe 'should create food' do
     before(:each) do
       @food = Food.create(name: 'Apple', measurement_unit: 'kg', price: '10', created_at: Time.now,
-      updated_at: Time.now, user_id: @user.id)
+                          updated_at: Time.now, user_id: @user.id)
     end
     it 'should create new food' do
       expect(@food).to be_valid
@@ -51,7 +51,7 @@ RSpec.describe Food, type: :request do
   describe 'should delete food' do
     before(:each) do
       @food = Food.create(name: 'Apple', measurement_unit: 'kg', price: '10', created_at: Time.now,
-      updated_at: Time.now, user_id: @user.id)
+                          updated_at: Time.now, user_id: @user.id)
     end
 
     it 'should be of the person of id' do

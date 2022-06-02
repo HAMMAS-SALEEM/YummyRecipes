@@ -2,21 +2,21 @@ require 'rails_helper'
 
 RSpec.describe PublicRecipesController, type: :request do
   before(:each) do
-    @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now, 
-    email: 'test@email.com', encrypted_password: 'hammas')
+    @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now,
+                        email: 'test@email.com', encrypted_password: 'hammas')
     @user.confirm
-    @user2 = User.create(name: 'Tresor', created_at: Time.now, updated_at: Time.now, 
-    email: 'test2@email.com', encrypted_password: 'tresor')
+    @user2 = User.create(name: 'Tresor', created_at: Time.now, updated_at: Time.now,
+                         email: 'test2@email.com', encrypted_password: 'tresor')
     @user2.confirm
     @recipe = Recipe.create(name: 'Pizza', preparation_time: '1 hour', cooking_time: '1 hour',
-    description: 'Today we are making pizza', public: true, created_at: Time.now, 
-    updated_at: Time.now, user_id: @user.id)
+                            description: 'Today we are making pizza', public: true, created_at: Time.now,
+                            updated_at: Time.now, user_id: @user.id)
     @recipe2 = Recipe.create(name: 'Pasta', preparation_time: '1 hour', cooking_time: '1 hour',
-    description: 'Today we are making pizza', public: true, created_at: Time.now, 
-    updated_at: Time.now, user_id: @user.id)
+                             description: 'Today we are making pizza', public: true, created_at: Time.now,
+                             updated_at: Time.now, user_id: @user.id)
     @recipe3 = Recipe.create(name: 'Noodles', preparation_time: '1 hour', cooking_time: '1 hour',
-    description: 'Today we are making pizza', public: false, created_at: Time.now, 
-    updated_at: Time.now, user_id: @user.id)
+                             description: 'Today we are making pizza', public: false, created_at: Time.now,
+                             updated_at: Time.now, user_id: @user.id)
     get public_recipes_path
   end
   describe 'Testing methods of Public Recipe' do

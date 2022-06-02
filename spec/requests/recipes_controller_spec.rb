@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Food, type: :request do
   before(:each) do
-    @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now, 
-    email: 'test@email.com', encrypted_password: 'hammas')
+    @user = User.create(name: 'Hammas', created_at: Time.now, updated_at: Time.now,
+                        email: 'test@email.com', encrypted_password: 'hammas')
     @user.confirm
     sign_in @user
     @recipe = Recipe.create(name: 'Pizza', preparation_time: '1 hour', cooking_time: '1 hour',
-    description: 'Today we are making pizza', public: true, created_at: Time.now, 
-    updated_at: Time.now, user_id: @user.id)
+                            description: 'Today we are making pizza', public: true, created_at: Time.now,
+                            updated_at: Time.now, user_id: @user.id)
     get recipes_path
   end
   describe 'Food Controller' do
@@ -53,7 +53,6 @@ RSpec.describe Food, type: :request do
     end
   end
   describe 'should create recipe' do
-
     it 'should create new recipe' do
       expect(@recipe).to be_valid
     end
@@ -63,7 +62,6 @@ RSpec.describe Food, type: :request do
     end
   end
   describe 'should delete food' do
-
     it 'should be of the person of id' do
       expect(@user.recipes.count).to be 1
       @recipe.destroy
