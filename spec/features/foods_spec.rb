@@ -8,9 +8,9 @@ RSpec.describe 'login page', type: :feature do
     @user.confirm
 
     Food.destroy_all
-    @food1 = Food.create(name: 'Broccoli', measurement_unit: 6, price: 7, user:  @user)
-    @food2 = Food.create(name: 'Sweet Potatoes', measurement_unit: 5, price: 15, user:  @user)
-    @food3 = Food.create(name: 'Watermelon', measurement_unit: 15, price: 25, user:  @user)
+    @food1 = Food.create(name: 'Broccoli', measurement_unit: 6, price: 7, user: @user)
+    @food2 = Food.create(name: 'Sweet Potatoes', measurement_unit: 5, price: 15, user: @user)
+    @food3 = Food.create(name: 'Watermelon', measurement_unit: 15, price: 25, user: @user)
 
     visit new_user_session_path
     fill_in 'Email', with: 'test@email.com'
@@ -40,7 +40,7 @@ RSpec.describe 'login page', type: :feature do
     end
 
     it 'should create a new food' do
-       visit new_food_path
+      visit new_food_path
 
       fill_in 'Name', with: 'Apple'
       fill_in 'Measurement unit', with: 'g'
