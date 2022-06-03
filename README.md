@@ -73,6 +73,12 @@ rspec
 - Twitter: [@HammasSaleem4](https://twitter.com/HammasSaleem4)
 - LinkedIn: [HAMMAS SALEEM](https://www.linkedin.com/in/hammas-saleem)
 
+👤 **Trésor Sawasawa**
+
+- GitHub: [@tresorsawasawa](https://github.com/tresorsawasawa)
+- Twitter: [@tresorsawasawa](https://twitter.com/TresorSawasawa)
+- LinkedIn: [Trésor Sawasawa](https://www.linkedin.com/in/tresor-sawasawa/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
