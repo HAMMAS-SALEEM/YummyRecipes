@@ -11,8 +11,8 @@ RSpec.describe 'general shopping list', type: :feature do
                             description: 'Today we are making pizza', public: true, created_at: Time.now,
                             updated_at: Time.now, user_id: @user.id)
     @recipe_food = RecipeFood.create(quantity: 2, created_at: Time.now, updated_at: Time.now,
-    food_id: @food.id, recipe_id: @recipe.id)
-    
+                                     food_id: @food.id, recipe_id: @recipe.id)
+
     visit new_user_session_path
     fill_in 'Email', with: 'test@email.com'
     fill_in 'Password', with: 'hammas'

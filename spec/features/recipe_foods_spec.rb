@@ -10,7 +10,7 @@ RSpec.describe 'general shopping list', type: :feature do
     @recipe = Recipe.create(name: 'Pizza', preparation_time: '1 hour', cooking_time: '1 hour',
                             description: 'Today we are making pizza', public: true, created_at: Time.now,
                             updated_at: Time.now, user_id: @user.id)
-    
+
     visit new_user_session_path
     fill_in 'Email', with: 'test@email.com'
     fill_in 'Password', with: 'hammas'
@@ -32,7 +32,7 @@ RSpec.describe 'general shopping list', type: :feature do
   describe 'Testing the form of new recipe food' do
     before(:each) do
       fill_in 'Quantity', with: '2'
-      select(@food.name, from: "recipe_food[food_id]")
+      select(@food.name, from: 'recipe_food[food_id]')
       click_button 'Submit'
     end
     it 'should create a recipe food' do
