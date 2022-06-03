@@ -8,6 +8,7 @@ RSpec.describe Food, type: :request do
     sign_in @user
     get foods_path
   end
+  
   describe 'Food Controller' do
     it 'gets the index page' do
       expect(response).to have_http_status :ok
