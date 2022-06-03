@@ -9,8 +9,8 @@
     <li>Steps are here: <%= @recipe.description %></li>
     <% if can? :destroy, @recipe %>
       <li class="recipe_details_buttons_container">
-        <%= link_to "Generate Shopping List" %>
-        <%= link_to "Add Ingrediats", new_recipe_recipe_food_path(@recipe) %>
+        <%= link_to "Generate Shopping List", general_shopping_lists_path %>
+        <%= link_to "Add Ingredients", new_recipe_recipe_food_path(@recipe) %>
           <%= button_to "Remove Recipe", recipe_path(@recipe), method: :delete %>
       </li>
     <% end %>
