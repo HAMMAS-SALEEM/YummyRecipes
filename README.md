@@ -83,7 +83,7 @@ rspec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ShahierNashaat/ruby-capstone/issues/new).
+Feel free to check the [issues page](https://github.com/HAMMAS-SALEEM/YummyRecipes/issues/new).
 
 ## Show your support
 
@@ -91,9 +91,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Many thanks to Microverse whose documentation has been used.
 
 ## 📝 License
 
