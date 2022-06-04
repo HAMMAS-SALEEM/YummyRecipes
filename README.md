@@ -5,9 +5,9 @@ This project is made as part of the Microverse curriculum for module 5- RAILS AN
 . "YummyRecipes" is a food recipe blogs web application that allows users to manage collections of recipes.
 
 
-## Link
+## Link Demo
 
-[Loom Video]()
+[Cick here to get live demo](https://desolate-ravine-89163.herokuapp.com/)
 
 ## Built With
 
